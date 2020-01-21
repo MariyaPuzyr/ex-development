@@ -9516,6 +9516,7 @@ input[type=password]:disabled {
   margin: 0 20px;
   left: 0;
   z-index: 1;
+  width: 100%;
 }
 
 .resultfalse {
@@ -9627,6 +9628,7 @@ input[type=password]:disabled {
 .userwallets_form {
   background: rgba(255, 255, 255, 0.5);
   padding: 20px;
+  margin: 0;
 }
 
 .get-login-form {
@@ -9648,6 +9650,72 @@ input[type=password]:disabled {
 
 .header-menu.active .get-login-form {
   display: block;
+}
+
+.userwallets_table_title {
+  font-size: 18px;
+  line-height: 22px;
+  color: #363636;
+  font-weight: 500;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px 20px 10px;
+}
+
+.userwallets_table_one {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  border-top: 1px solid rgba(54, 54, 54, 0.1);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.userwallets_table_one:last-child {
+  border-bottom: 1px solid rgba(54, 54, 54, 0.1);
+}
+
+.userwallets_table_one .userwallets_one_title {
+  line-height: 22px;
+  color: #363636;
+  margin: 0 0 5px;
+  font: 500 18px Helvetica, sans-serif;
+}
+
+.userwallets_table_one .usersbill_one_account {
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.userwallets_table_one .no_items_ins {
+  opacity: .5;
+  font-size: 16px;
+  line-height: 24px;
+  color: #363636;
+}
+
+.close_userwallets {
+  background: #363636;
+  width: 17px;
+  height: 18px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-mask: url("../img/svg/delete-ico.svg") no-repeat center;
+  mask: url("../img/svg/delete-ico.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.close_userwallets:hover {
+  background: #2fab6b;
 }
 
 @media (min-width: 576px) {
