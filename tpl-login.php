@@ -5,7 +5,10 @@ if( !defined( 'ABSPATH')){ exit(); }
  */
 
 ?>
-<div class="currency-reserves" id="content">
+<div class="currency-reserves get-login-form" id="content">
+  <div class="d-flex align-items-center mb-2 position-relative">
+    <h2 class="my-0">Пользовательская информация:</h2>
+  </div>
   <div class="get-login">
     <p>Будет доступен после входа в аккаунт.</p>
     <div class="get-login-with"><span>Войти с помощью:</span>

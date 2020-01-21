@@ -41,6 +41,7 @@ $(document).ready(function () {
     $(".operations-item").removeClass("active"), "operations-item active" != o && $(this).parents(".operations-item").toggleClass("active")
   });
   /* style select options */
+  $('select').styler();
   $.ajaxSetup({complete: function(){$("select").styler(); }});
 });
 

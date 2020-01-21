@@ -7440,6 +7440,7 @@ a.text-dark:focus {
 .send-btn,
 .log_submit,
 .reg_submit,
+.userwallets_one_tab input[type="submit"],
 .acf_submit {
   margin-top: 30px;
   width: 100%;
@@ -7473,6 +7474,7 @@ a.text-dark:focus {
 .send-btn:not(:disabled):hover,
 .log_submit:not(:disabled):hover,
 .reg_submit:not(:disabled):hover,
+.userwallets_one_tab input:not(:disabled):hover[type="submit"],
 .acf_submit:not(:disabled):hover {
   border-width: 4px;
   font-size: 22px;
@@ -7482,6 +7484,7 @@ a.text-dark:focus {
 .send-btn:active,
 .log_submit:active,
 .reg_submit:active,
+.userwallets_one_tab input:active[type="submit"],
 .acf_submit:active {
   background: #363636;
   color: #FFE7CC;
@@ -7491,6 +7494,7 @@ a.text-dark:focus {
 .send-btn:focus,
 .log_submit:focus,
 .reg_submit:focus,
+.userwallets_one_tab input:focus[type="submit"],
 .acf_submit:focus {
   outline: none;
 }
@@ -7499,6 +7503,7 @@ a.text-dark:focus {
 .send-btn:disabled,
 .log_submit:disabled,
 .reg_submit:disabled,
+.userwallets_one_tab input:disabled[type="submit"],
 .acf_submit:disabled {
   opacity: .2;
   cursor: no-drop;
@@ -9471,6 +9476,7 @@ input[type=password]:disabled {
   line-height: 24px;
   color: #363636;
   max-height: 280px;
+  overflow: auto;
 }
 
 .jq-selectbox__not-found {
@@ -9484,7 +9490,8 @@ input[type=password]:disabled {
 .log_div_title,
 .reg_div_title,
 .log_line_subm_right,
-.reg_line_subm_right {
+.reg_line_subm_right,
+.userwallets_form_title {
   display: none;
 }
 
@@ -9596,6 +9603,51 @@ input[type=password]:disabled {
 .checkbox label::before {
   position: absolute;
   left: 0;
+}
+
+.jq-selectbox ul {
+  height: 100%;
+  max-height: 100% !important;
+}
+
+.userwallets_help {
+  line-height: 19px;
+  color: #363636;
+  opacity: .7;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: normal 14px Helvetica, sans-serif;
+}
+
+.userwallets_help p {
+  margin: 0;
+}
+
+.userwallets_form {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+
+.get-login-form {
+  width: 320px;
+  height: -webkit-calc(100vh - 51px);
+  height: calc(100vh - 51px);
+  overflow: auto;
+  overflow-x: hidden;
+  display: none;
+}
+
+.get-login-form h2 {
+  margin: 8px 18px 13px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #363636;
+}
+
+.header-menu.active .get-login-form {
+  display: block;
 }
 
 @media (min-width: 576px) {
