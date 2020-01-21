@@ -9491,7 +9491,8 @@ input[type=password]:disabled {
 .reg_div_title,
 .log_line_subm_right,
 .reg_line_subm_right,
-.userwallets_form_title {
+.userwallets_form_title,
+.userxchtable_title {
   display: none;
 }
 
@@ -9516,7 +9517,8 @@ input[type=password]:disabled {
   margin: 0 20px;
   left: 0;
   z-index: 1;
-  width: 100%;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
 }
 
 .resultfalse {

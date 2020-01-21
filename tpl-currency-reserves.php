@@ -1,4 +1,25 @@
+<?php
+if( !defined( 'ABSPATH')){ exit(); }
+global $or_template_directory;
+
+/*
+
+Template Name: Currency reserves
+
+*/
+?>
 <div class="currency-reserves" id="content">
+  <div class="d-flex align-items-center mb-2 position-relative"><a class="back-link" href="#"></a>
+    <h2 class="sidebar-title">456456</h2>
+  </div>
+    <?php
+    if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
+<!--<div class="currency-reserves" id="content">
   <div class="d-flex align-items-center mb-2 position-relative"><a class="back-link" href="#"></a>
     <h2 class="sidebar-title">Резервы валют</h2>
   </div>
@@ -75,4 +96,4 @@
       <div class="currency-reserves__tarif">Usd</div>
     </div>
   </div>
-</div>
+</div>-->
