@@ -172,23 +172,7 @@ $plugin = get_plugin_class();
                 <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#contacts-info">
                   <div class="contact-form">
                     <p class="description">Вопросы, предложения и пожелания.</p>
-                    <form action="">
-                      <div class="form-group">
-                        <input class="form-control" type="text" required=""><span class="form-underline"></span>
-                        <label>Email:</label>
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="text" required=""><span class="form-underline"></span>
-                        <label>Имя:</label>
-                      </div>
-                      <div class="form-group">
-                        <textarea class="form-control" id="message" rows="2" name="message" required=""></textarea><span class="form-underline"></span>
-                        <label for="message">Сообщение:</label>
-                      </div>
-                      <div class="form-group">
-                        <button class="send-btn" type="submit">Отправить</button>
-                      </div>
-                    </form>
+                    <?php echo do_shortcode('[contact_form]'); ?>
                   </div>
                 </div>
               </div>

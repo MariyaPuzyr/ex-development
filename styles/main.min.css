@@ -7441,6 +7441,7 @@ a.text-dark:focus {
 .log_submit,
 .reg_submit,
 .userwallets_one_tab input[type="submit"],
+.cf_submit,
 .acf_submit {
   margin-top: 30px;
   width: 100%;
@@ -7475,6 +7476,7 @@ a.text-dark:focus {
 .log_submit:not(:disabled):hover,
 .reg_submit:not(:disabled):hover,
 .userwallets_one_tab input:not(:disabled):hover[type="submit"],
+.cf_submit:not(:disabled):hover,
 .acf_submit:not(:disabled):hover {
   border-width: 4px;
   font-size: 22px;
@@ -7485,6 +7487,7 @@ a.text-dark:focus {
 .log_submit:active,
 .reg_submit:active,
 .userwallets_one_tab input:active[type="submit"],
+.cf_submit:active,
 .acf_submit:active {
   background: #363636;
   color: #FFE7CC;
@@ -7495,6 +7498,7 @@ a.text-dark:focus {
 .log_submit:focus,
 .reg_submit:focus,
 .userwallets_one_tab input:focus[type="submit"],
+.cf_submit:focus,
 .acf_submit:focus {
   outline: none;
 }
@@ -7504,6 +7508,7 @@ a.text-dark:focus {
 .log_submit:disabled,
 .reg_submit:disabled,
 .userwallets_one_tab input:disabled[type="submit"],
+.cf_submit:disabled,
 .acf_submit:disabled {
   opacity: .2;
   cursor: no-drop;
@@ -9492,8 +9497,13 @@ input[type=password]:disabled {
 .log_line_subm_right,
 .reg_line_subm_right,
 .userwallets_form_title,
-.userxchtable_title {
+.userxchtable_title,
+.cf_div_title {
   display: none;
+}
+
+textarea {
+  resize: none;
 }
 
 .acf_div {
@@ -9512,13 +9522,12 @@ input[type=password]:disabled {
   font: normal 18px Helvetica, sans-serif;
   text-align: center;
   padding: 15px 10px;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   margin: 0 20px;
-  left: 0;
+  right: 0;
   z-index: 1;
-  width: -webkit-calc(100% - 20px);
-  width: calc(100% - 20px);
+  width: 280px;
 }
 
 .resultfalse {
@@ -9718,6 +9727,23 @@ input[type=password]:disabled {
 
 .close_userwallets:hover {
   background: #2fab6b;
+}
+
+.contact-form .cf_div {
+  padding: 0;
+}
+
+.contact-form .cf_textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #363636;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 5px 0;
+}
+
+.contact-form .cf_textarea:focus {
+  background: #ffffff;
 }
 
 @media (min-width: 576px) {
