@@ -51,5 +51,7 @@ $.ajax({
     if($('.jq-selectbox').hasClass('changed')){
       $('.other-info').addClass('open');
     }
+    /* show/hide alert */
+    setInterval(function() { $(".resultfalse, .resulttrue").hide(); }, 5000);
   }
 });
