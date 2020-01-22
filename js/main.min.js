@@ -52,6 +52,6 @@ $.ajax({
       $('.other-info').addClass('open');
     }
     /* show/hide alert */
-    setInterval(function() { $(".resultfalse, .resulttrue").hide(); }, 5000);
+    setInterval(function() { $(".resultfalse, .resulttrue, .exch_error").hide(); }, 5000);
   }
 });
