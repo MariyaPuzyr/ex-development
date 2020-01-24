@@ -47,6 +47,9 @@ $(document).ready(function () {
   /* style select options */
   $('select').styler();
   $.ajaxSetup({complete: function(){$("select").styler(); }});
+  $(document).on("click", '.xtl_submit.js_exchange_link', function () {
+    $('.xchange_table_wrap').hide();
+  });
 });
 
 /* show next step for create account*/
