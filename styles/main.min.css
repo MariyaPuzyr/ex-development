@@ -7630,7 +7630,7 @@ textarea {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 11;
   position: relative;
 }
 
@@ -7788,11 +7788,6 @@ textarea {
   mask: url("../img/svg/menu-icons-burger.svg") no-repeat center;
 }
 
-.slick-slide {
-  max-width: 770px;
-  width: 100%;
-}
-
 .currency-reserves .back-link {
   width: 15px;
   height: 10px;
@@ -7922,6 +7917,10 @@ textarea {
   text-decoration: underline;
   color: #363636;
   position: relative;
+}
+
+.news-list__item--link p {
+  margin: 0;
 }
 
 .news-list__item.new .news-list__item--link::before {
@@ -9497,10 +9496,7 @@ input[type=password]:disabled {
 .log_line_subm_right,
 .reg_line_subm_right,
 .userwallets_form_title,
-.userxchtable_title,
-.cf_div_title,
-.tbl4 .xtt_table_title3,
-.tbl4 .xtt_table_title4 {
+.userxchtable_title {
   display: none;
 }
 
@@ -9750,103 +9746,72 @@ textarea {
   background: #ffffff;
 }
 
-.exch_ajax_wrap,
-.exchange_status_html {
+/*
+.exch_ajax_wrap, .exchange_status_html {
   min-height: auto;
 }
 
-.tbl4 .xtt_left_col_icon,
-.tbl4 .xtt_right_col_icon,
-.tbl4 .xtt_left_col_title,
-.tbl4 .xtt_right_col_title {
+.tbl4 .xtt_left_col_icon, .tbl4 .xtt_right_col_icon,
+.tbl4 .xtt_left_col_title, .tbl4 .xtt_right_col_title {
   width: 49%;
   background: none;
   padding: 0;
+  .xtt_table_title1, .xtt_table_title2 {
+    padding: 0;
+    line-height: 60px;
+    color: $color_default;
+    font: 700 30px Helvetica, sans-serif;
+    text-transform: none;
+    margin: 10px 0 20px;
+  }
 }
-
-.tbl4 .xtt_left_col_icon .xtt_table_title1,
-.tbl4 .xtt_left_col_icon .xtt_table_title2,
-.tbl4 .xtt_right_col_icon .xtt_table_title1,
-.tbl4 .xtt_right_col_icon .xtt_table_title2,
-.tbl4 .xtt_left_col_title .xtt_table_title1,
-.tbl4 .xtt_left_col_title .xtt_table_title2,
-.tbl4 .xtt_right_col_title .xtt_table_title1,
-.tbl4 .xtt_right_col_title .xtt_table_title2 {
-  padding: 0;
-  line-height: 60px;
-  color: #363636;
-  font: 700 30px Helvetica, sans-serif;
-  text-transform: none;
-  margin: 10px 0 20px;
-}
-
 .tbl_icon {
-  -webkit-border-radius: 0;
   border-radius: 0;
   color: #363636;
   font: bold 18px Helvetica, sans-serif;
   background: #FFF9F3;
   padding: 10px 15px;
-}
-
-.tbl_icon:hover {
-  background: rgba(54, 54, 54, 0.7);
+  &:hover {
+    background: rgba(54, 54, 54, 0.7);
+  }
 }
 
 .tbl_icon.active {
-  -webkit-box-shadow: none;
   box-shadow: none;
   background: rgba(54, 54, 54, 0.8);
 }
-
-.tbl4 .xtt_left_col_table,
-.tbl4 .xtt_right_col_table {
+.tbl4 .xtt_left_col_table, .tbl4 .xtt_right_col_table {
   width: 49%;
 }
-
 .xtt_one_line_left,
 .xtt_one_line_right {
   background: transparent;
   border: none;
   padding: 13px 15px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 .xtt_change_ico {
   width: 30px;
   height: 30px;
 }
-
 .xtt_one_line_ico_left,
 .xtt_one_line_ico_right {
   width: 30px;
 }
-
 .xtt_one_line_name_left,
 .tbl4 .xtt_one_line_name_right {
   width: auto;
 }
-
 .xtt_one_line_name {
   height: auto;
   line-height: 60px;
   font: bold 30px Helvetica, sans-serif;
 }
-
 .xtt_html_abs {
   background-color: #FFF9F3;
 }
-
 .tbl4 .xtt_one_line_curs_right,
 .xtt_one_line_reserv_right {
   margin: 0;
@@ -9854,10 +9819,12 @@ textarea {
   border-left: 0;
   width: auto;
 }
-
 .xtt_one_line_rez {
   top: 30px;
 }
+.js_exchange_link:hover {
+  text-decoration: none;
+}*/
 
 @media (min-width: 576px) {
   .container {
@@ -14490,6 +14457,44 @@ textarea {
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog.modal-news .modal-body {
+    padding: 25px 15px;
+  }
+
+  .modal-dialog.modal-news .section {
+    top: -40px;
+  }
+
+  .modal-dialog.modal-news h2 {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .modal-dialog.modal-news p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .modal-dialog.modal-news .share-list {
+    margin-bottom: 0;
+  }
+
+  .slick-arrow {
+    top: -80px;
+  }
+
+  .slick-prev {
+    left: auto;
+    right: 115px;
+  }
+
+  .slick-next {
+    right: 45px;
   }
 }
 
