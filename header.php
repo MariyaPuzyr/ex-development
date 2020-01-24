@@ -186,26 +186,4 @@ $plugin = get_plugin_class();
   <!-- add my own header end -->
 
 	<div class="wrapper">
-
-		<?php if(!is_front_page()){ ?>
-		<div class="breadcrumb_wrap">
-			<div class="breadcrumb_div">
-				<div class="breadcrumb_ins">
-
-					<h1 class="breadcrumb_title" id="the_title_page">
-						<?php the_breadcrumb_title(); ?>
-					</h1>
-
-					<div class="breadcrumb">
-						<?php the_breadcrumb(__('Currency exchange','pntheme')); ?>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<?php } ?>
-
-		<div class="content_wrap">
-			<?php if(!is_front_page() and !is_page_template('pn-notsidebar.php')){ ?>
-			<div class="content">
-			<?php } ?>
+    		<div class="content_wrap">
