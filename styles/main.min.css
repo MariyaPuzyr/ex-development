@@ -9495,6 +9495,10 @@ input[type=password]:disabled {
   font-size: 13px;
 }
 
+body {
+  overflow: auto;
+}
+
 .acf_div_title,
 .log_div_title,
 .reg_div_title,
@@ -9503,7 +9507,6 @@ input[type=password]:disabled {
 .userwallets_form_title,
 .userxchtable_title,
 .xtl_table_top,
-.jq-selectbox,
 .xtl_ico_wrap {
   display: none;
 }
@@ -9987,8 +9990,38 @@ textarea {
   background-color: transparent;
 }
 
+.homepage_wrap .jq-selectbo {
+  display: none;
+}
+
 .hexch_div {
   width: 100%;
+}
+
+.hexch_div_ins {
+  padding: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+}
+
+.hexch_div_ins .hexch_left,
+.hexch_div_ins .hexch_right {
+  width: 50%;
+}
+
+.hexch_div_ins .hexch_pers {
+  width: 100%;
+}
+
+.hexch_div_ins .hexch_submit_div,
+.hexch_div_ins .hexch_checkdata_div {
+  padding: 0;
+}
+
+.hexch_div .captcha_div {
+  margin: 0;
 }
 
 @media (min-width: 576px) {

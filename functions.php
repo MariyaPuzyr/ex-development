@@ -64,3 +64,10 @@ function add_custom_scripts()
 add_action('wp_enqueue_scripts', 'add_custom_scripts');
 
 add_filter( 'widget_text', 'do_shortcode' );
+
+//перенаправление после регистрации start
+function wph_reg_redirect(){
+    return home_url('/rules/');
+}
+add_filter('registration_redirect', 'wph_reg_redirect');
+//перенаправление после регистрации end
