@@ -9806,7 +9806,8 @@ textarea {
   background: #363636;
   height: 7px;
   left: -50%;
-  bottom: -55px;
+  bottom: -93px;
+  z-index: 1;
 }
 
 .homepage_wrap .xtl_table_body_wrap::after {
@@ -9818,7 +9819,7 @@ textarea {
   background-size: cover;
   position: absolute;
   right: -11px;
-  bottom: -59px;
+  bottom: -97px;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -9855,7 +9856,8 @@ textarea {
 }
 
 .homepage_wrap .select_js_title .select_js_title_ins {
-  font: 700 36px/74px Helvetica, sans-serif;
+  font: 700 36px Helvetica, sans-serif;
+  line-height: normal;
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9883,7 +9885,8 @@ textarea {
 
 .homepage_wrap .iselect_js .select_js_title_ins .select_ico {
   width: 80px;
-  top: -40px;
+  height: 80px;
+  top: -60px;
   left: -30px;
 }
 
@@ -9942,7 +9945,7 @@ textarea {
   width: -webkit-calc(100% - 40px);
   width: calc(100% - 40px);
   font-size: 90px;
-  line-height: normal;
+  line-height: 91px;
   font-weight: 700;
   height: auto;
 }
@@ -10002,7 +10005,7 @@ textarea {
 }
 
 .homepage_wrap .select_js.open .select_js_title {
-  background: #fff9f3;
+  background: transparent;
 }
 
 .homepage_wrap .xtl_select_wrap {
@@ -10133,7 +10136,7 @@ textarea {
 
 .wrapper {
   min-height: auto;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 @media (min-width: 576px) {
