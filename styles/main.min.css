@@ -7442,6 +7442,8 @@ a.text-dark:focus {
 .reg_submit,
 .userwallets_one_tab input[type="submit"],
 .cf_submit,
+.hexch_submit,
+.rb_submit,
 .homepage_wrap .xtl_submit.js_exchange_link,
 .acf_submit {
   margin-top: 30px;
@@ -7478,6 +7480,8 @@ a.text-dark:focus {
 .reg_submit:not(:disabled):hover,
 .userwallets_one_tab input:not(:disabled):hover[type="submit"],
 .cf_submit:not(:disabled):hover,
+.hexch_submit:not(:disabled):hover,
+.rb_submit:not(:disabled):hover,
 .homepage_wrap .xtl_submit.js_exchange_link:not(:disabled):hover,
 .acf_submit:not(:disabled):hover {
   border-width: 4px;
@@ -7490,6 +7494,8 @@ a.text-dark:focus {
 .reg_submit:active,
 .userwallets_one_tab input:active[type="submit"],
 .cf_submit:active,
+.hexch_submit:active,
+.rb_submit:active,
 .homepage_wrap .xtl_submit.js_exchange_link:active,
 .acf_submit:active {
   background: #363636;
@@ -7502,6 +7508,8 @@ a.text-dark:focus {
 .reg_submit:focus,
 .userwallets_one_tab input:focus[type="submit"],
 .cf_submit:focus,
+.hexch_submit:focus,
+.rb_submit:focus,
 .homepage_wrap .xtl_submit.js_exchange_link:focus,
 .acf_submit:focus {
   outline: none;
@@ -7513,6 +7521,8 @@ a.text-dark:focus {
 .reg_submit:disabled,
 .userwallets_one_tab input:disabled[type="submit"],
 .cf_submit:disabled,
+.hexch_submit:disabled,
+.rb_submit:disabled,
 .homepage_wrap .xtl_submit.js_exchange_link:disabled,
 .acf_submit:disabled {
   opacity: .2;
@@ -7995,7 +8005,7 @@ textarea {
   width: 33px;
   height: 33px;
   top: -55px;
-  right: 0;
+  right: -14px;
 }
 
 .modal-dialog.modal-news .close .icon {
@@ -9495,6 +9505,7 @@ input[type=password]:disabled {
   font-size: 13px;
 }
 
+html,
 body {
   overflow: auto;
 }
@@ -9990,7 +10001,7 @@ textarea {
   background-color: transparent;
 }
 
-.homepage_wrap .jq-selectbo {
+.homepage_wrap .jq-selectbox {
   display: none;
 }
 
@@ -10020,8 +10031,58 @@ textarea {
   padding: 0;
 }
 
+.hexch_div_ins .hexch_curs_line {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hexch_div_ins .hexch_curs_input,
+.hexch_div_ins .hexch_pers_input {
+  width: 100%;
+}
+
+.hexch_div_ins .hexch_comis_line {
+  padding: 0;
+  font: normal 14px/19px Helvetica, sans-serif;
+  color: #363636;
+  opacity: .7;
+}
+
+.hexch_div_ins .hexch_curs_label,
+.hexch_div_ins .hexch_pers_label {
+  width: auto;
+  margin-right: 20px;
+  height: auto;
+}
+
+.hexch_div_ins .hexch_curs_label_ins,
+.hexch_div_ins .hexch_pers_label_ins {
+  width: auto;
+  height: auto;
+  text-align: left;
+}
+
 .hexch_div .captcha_div {
   margin: 0;
+}
+
+.standart_windowins {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.standart_window_close {
+  width: 33px;
+  height: 33px;
+  top: -55px;
+  right: -14px;
+  background: #fff;
+  -webkit-mask: url("../img/svg/close-ico.svg") no-repeat center;
+  mask: url("../img/svg/close-ico.svg") no-repeat center;
 }
 
 @media (min-width: 576px) {
