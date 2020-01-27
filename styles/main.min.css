@@ -9517,7 +9517,8 @@ body {
 .reg_line_subm_right,
 .userwallets_form_title,
 .userxchtable_title,
-.xtl_ico_wrap {
+.xtl_ico_wrap,
+.hexch_message_wrap {
   display: none;
 }
 
@@ -9915,14 +9916,15 @@ textarea {
 
 .homepage_wrap .xtl_submit.js_exchange_link {
   margin: auto auto auto 0;
-  padding: 5px 25px;
+  padding: 18px 25px;
   text-decoration: none;
   -webkit-border-radius: 0;
   border-radius: 0;
   text-transform: none;
-  width: 200px;
+  width: 225px;
   font: 700 30px/40px Helvetica, sans-serif;
   background: transparent;
+  height: 80px;
 }
 
 .homepage_wrap .xtl_submit.js_exchange_link:hover {
@@ -10030,6 +10032,15 @@ textarea {
   border-radius: 0;
   border: none;
   background: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .hexch_div_ins .hexch_left,
@@ -10137,6 +10148,95 @@ textarea {
 .wrapper {
   min-height: auto;
   margin-top: 50px;
+}
+
+.hexch_widget .hexch_title_ins {
+  font: 700 18px/26px Helvetica, sans-serif;
+}
+
+.hexch_widget .hexch_txt_line {
+  padding: 0;
+  height: auto;
+}
+
+.hexch_widget .hexch_txt_line p {
+  margin: 0;
+}
+
+.hexch_widget .hexch_left,
+.hexch_widget .hexch_right {
+  width: 100%;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.hexch_widget .hexch_pers,
+.hexch_widget .captcha_div {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.hexch_widget .hexch_submit_div {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.hexch_widget input[type="text"] {
+  font: 20px/24px Helvetica, sans-serif;
+}
+
+.hexch_widget .hexch_pers_title_ins {
+  font-size: 48px;
+  line-height: 58px;
+  color: #363636;
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.hexch_widget .hexch_submit {
+  padding: 18px 25px;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  text-transform: none;
+  width: 205px;
+  font: 700 28px/normal Helvetica, sans-serif;
+  background: transparent;
+  color: #363636;
+  height: 70px;
+  margin: 30px 0;
+}
+
+.hexch_widget .hexch_submit:hover {
+  font-size: 28px !important;
+}
+
+.hexch_widget .checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.hexch_widget .checkbox label {
+  line-height: 25px;
+}
+
+.hexch_widget .hexch_comis_line {
+  padding-left: 160px;
+  position: relative;
+  top: -20px;
 }
 
 @media (min-width: 576px) {
