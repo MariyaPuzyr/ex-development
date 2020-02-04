@@ -1,6 +1,7 @@
 <?php
 if( !defined( 'ABSPATH')){ exit(); }
 global $or_template_directory;
+$ho_change = get_theme_option('ho_change', array('wtitle','wtext','ititle','itext','blocknews','blocreviews','catnews','lastobmen','hidecurr','partners','advantages'));
 
 /*
 
@@ -10,15 +11,36 @@ Template Name: Currency reserves
 ?>
 <div class="currency-reserves" id="content">
   <div class="d-flex align-items-center mb-2 position-relative"><a class="back-link" href="#"></a>
-    <h2 class="sidebar-title">456456</h2>
+    <h2 class="sidebar-title">Резервы валют</h2>
   </div>
+    <form action="">
+        <div class="form-group">
+            <input class="form-control search-reserves" type="search" required=""><span class="form-underline"></span>
+            <label>Поиск по названию валюты</label>
+            <button class="search-btn"></button>
+        </div>
+    </form>
+  <?php
+  if(function_exists('list_view_currencies')){
+    $hidecurr = explode(',',is_isset($ho_change,'hidecurr'));
+    $currencies = list_view_currencies('', $hidecurr);
+    if(count($currencies) > 0){ ?>
+        <div class="currency-reserves__list">
+      <?php
+        foreach($currencies as $currency){?>
+            <div class="currency-reserves__item"><img class="currency-reserves__ico" style="width: 26px" src="<?= $currency['logo']?>">
+                <div class="currency-reserves__info"><?= $currency['psys']?><span><?php echo is_out_sum($currency['reserv'], $currency['decimal'], 'reserv'); ?></span></div>
+                <div class="currency-reserves__tarif"><?= $currency['currency_code']?></div>
+            </div>
+
+    <?php } ?>
+        </div>
     <?php
-    if (have_posts()) : ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <?php the_content(); ?>
-        <?php endwhile; ?>
-    <?php endif; ?>
+    }
+  }
+  ?>
 </div>
+
 <!--<div class="currency-reserves" id="content">
   <div class="d-flex align-items-center mb-2 position-relative"><a class="back-link" href="#"></a>
     <h2 class="sidebar-title">Резервы валют</h2>

@@ -161,7 +161,7 @@ $plugin = get_plugin_class();
             <div class="menu-height">
                 <ul class="links-list">
                     <li><a href="exchange.html">Обмен</a></li>
-                    <li><a class="load-page" href="#" data-link="<?php echo $or_template_directory . '/tpl-currency-reserves.php'; ?>">Резервы валют</a></li>
+                    <li><a class="load-page" href="#" data-link="currency-reserves">Резервы валют</a></li>
                     <li><a class="load-page" href="#" data-link="news-list">Новости</a></li>
                     <li><a href="#">О сервисе</a></li>
                     <li><a href="affiliate-program.html">Партнерская программа</a></li>
