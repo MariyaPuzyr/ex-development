@@ -2,6 +2,8 @@
 
 $ui = wp_get_current_user();
 $user_id = intval($ui->ID);
+$stand_refid = stand_refid();
+$url = rtrim(get_site_url_ml(),'/') .'/';
 
 global $or_template_directory;
 $plugin = get_plugin_class();
@@ -136,7 +138,7 @@ $plugin = get_plugin_class();
             <div class="menu-height">
               <div class="user-info"><span>Привет, <?php echo get_caps_name($ui->user_login); ?></span>
                 <div class="discount">Накопительная скидка –
-                    <?php echo do_shortcode( '[user_discount]' ); ?></div>
+                    <?php echo get_user_discount($user_id, $ui).'%'; ?></div>
               </div>
               <ul class="links-list">
                 <li><a class="load-page" href="#" data-link="<?php echo $plugin->get_page('account'); ?>">Личная информация</a></li>
@@ -147,7 +149,7 @@ $plugin = get_plugin_class();
                 <div class="partners-info__title">Партнерская ссылка:</div>
                 <form action="">
                   <div class="partners-info__copy">
-                    <input class="form-control" type="text" disabled="disabled" value="Exall.money/thanksazaza">
+                    <input class="form-control" type="text" disabled="disabled" value="<?= $url.'?'. $stand_refid .'='. $user_id ?>">
                     <button class="copy-btn"></button>
                   </div>
                   <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="#">Подробнее</a></div>
@@ -157,23 +159,25 @@ $plugin = get_plugin_class();
           </div>
           <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
             <div class="menu-height">
-              <ul class="links-list">
-                <li><a href="exchange.html">Обмен</a></li>
-                <li><a class="load-page" href="#" data-link="<?php echo $or_template_directory . '/tpl-currency-reserves.php'; ?>">Резервы валют</a></li>
-                <li><a class="load-page" href="#" data-link="news-list">Новости</a></li>
-                <li><a href="#">О сервисе</a></li>
-                <li><a href="affiliate-program.html">Партнерская программа</a></li>
+              <ul class="links-list main-menu-links">
+                <li><a class="get-page" href="exchange.html">Обмен</a></li>
+                <li><a class="get-page" href="#" data-link="currency-reserves">Резервы валют</a></li>
+                <li><a class="get-page" href="#" data-link="news-list">Новости</a></li>
+                <li><a class="get-page" href="#">О сервисе</a></li>
+                <li><a class="get-page" href="affiliate-program.html">Партнерская программа</a></li>
               </ul>
-              <div class="partners-info mt-auto">
+              <div class="partners-info mt-auto main-menu-partners-info">
                 <div class="partners-info__title">Партнерская ссылка:</div>
                 <form action="">
                   <div class="partners-info__copy">
-                    <input class="form-control" type="text" disabled="disabled" value="Exall.money/thanksazaza">
+                    <input class="form-control" type="text" disabled="disabled" value="<?= $url.'?'. $stand_refid .'='. $user_id ?>">
                     <button class="copy-btn"></button>
                   </div>
                   <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="#">Подробнее</a></div>
                 </form>
               </div>
+                <div class="sidebar-page"></div>
+
             </div>
           </div>
         <?php } else { ?>

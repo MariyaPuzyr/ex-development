@@ -15,7 +15,7 @@ if(!function_exists('theme_include')){
 function init_premium_theme($plugin_name=''){
 	$plugin_name = trim($plugin_name);
 	if($plugin_name){
-			
+
 		$script_name = '';
 		if(isset($_SERVER['SCRIPT_NAME'])){
 			$script_name = $_SERVER['SCRIPT_NAME'];
@@ -31,7 +31,7 @@ function init_premium_theme($plugin_name=''){
 			$output_html = '<div style="border: 1px solid #ff0000; padding: 10px 15px; font: 13px Arial; width: 500px; border-radius: 3px; margin: 0 auto; text-align: center;">'. $text .'</div>';
 			echo apply_filters('update_mode_plugin', $output_html, $text);
 			exit;
-		}	
+		}
 	}
 }
 init_premium_theme('premiumbox');
@@ -44,7 +44,7 @@ theme_include('includes/sites_func');
 theme_include('includes/breadcrumb');
 theme_include('includes/api');
 
-theme_include('change/color_scheme'); 
+theme_include('change/color_scheme');
 theme_include('change/header');
 theme_include('change/home');
 theme_include('change/footer');
@@ -71,3 +71,8 @@ function wph_reg_redirect(){
 }
 add_filter('registration_redirect', 'wph_reg_redirect');
 //перенаправление после регистрации end
+
+// изменение длины выводимого текста для вкладки Новости
+add_filter( 'excerpt_length', function(){
+  return 10;
+} );

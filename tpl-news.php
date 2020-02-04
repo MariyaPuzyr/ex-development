@@ -12,7 +12,7 @@ $postDay =  get_the_date();
     <h2 class="sidebar-title">Новости</h2>
   </div>
     <?php
-    $args = unserialize(stripslashes($_POST['query']));
+//    $args = unserialize(stripslashes($_POST['query']));
     $args['post_status'] = 'publish';
     $query = new WP_Query($args);
     ?>
@@ -22,15 +22,15 @@ $postDay =  get_the_date();
         while ($query->have_posts()): $query->the_post();
       ?>
       <?php if (get_the_date() == $currentDay) {?>
-          <div class="news-list__item meganews" data-toggle="modal" data-target="#news">
+          <div class="news-list__item meganews">
             <div class="news-list__item--date"><?php echo get_the_date(); ?></div>
-            <div class="news-list__item--link" data-toggle="modal" data-target="#news"><?php the_excerpt(); ?></div>
+            <div class="news-list__item--link" data-post-id="<?= get_the_ID()?>"><?php the_excerpt(); ?></div>
           </div>
         <?php } else {
         ?>
-    <div class="news-list__item" data-toggle="modal" data-target="#news">
+    <div class="news-list__item">
       <div class="news-list__item--date"><?php echo get_the_date(); ?></div>
-      <div class="news-list__item--link" data-toggle="modal" data-target="#news"><?php the_excerpt(); ?></div>
+      <div class="news-list__item--link" data-post-id="<?= get_the_ID()?>"><?php the_excerpt(); ?></div>
     </div>
     <?php
             }
