@@ -159,14 +159,14 @@ $plugin = get_plugin_class();
           </div>
           <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
             <div class="menu-height">
-              <ul class="links-list main-menu-links">
-                <li><a class="get-page" href="exchange.html">Обмен</a></li>
-                <li><a class="get-page" href="#" data-link="currency-reserves">Резервы валют</a></li>
-                <li><a class="get-page" href="#" data-link="news-list">Новости</a></li>
-                <li><a class="get-page" href="#">О сервисе</a></li>
-                <li><a class="get-page" href="affiliate-program.html">Партнерская программа</a></li>
-              </ul>
-              <div class="partners-info mt-auto main-menu-partners-info">
+                <ul class="links-list">
+                    <li><a href="exchange.html">Обмен</a></li>
+                    <li><a class="load-page" href="#" data-link="<?php echo $or_template_directory . '/tpl-currency-reserves.php'; ?>">Резервы валют</a></li>
+                    <li><a class="load-page" href="#" data-link="news-list">Новости</a></li>
+                    <li><a href="#">О сервисе</a></li>
+                    <li><a href="affiliate-program.html">Партнерская программа</a></li>
+                </ul>
+              <div class="partners-info mt-auto">
                 <div class="partners-info__title">Партнерская ссылка:</div>
                 <form action="">
                   <div class="partners-info__copy">
@@ -176,8 +176,6 @@ $plugin = get_plugin_class();
                   <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="#">Подробнее</a></div>
                 </form>
               </div>
-                <div class="sidebar-page"></div>
-
             </div>
           </div>
         <?php } else { ?>

@@ -18,8 +18,6 @@ $f_change = get_theme_option('f_change', array('ctext','timetable','phone','vk',
         </button>
         <div class="section">Новости</div>
         <div class="slider single-item">
-          <div class="modal-post-content">
-          </div>
 
         </div>
       </div>
