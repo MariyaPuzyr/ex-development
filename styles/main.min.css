@@ -7445,6 +7445,7 @@ a.text-dark:focus {
 .hexch_submit,
 .rb_submit,
 .homepage_wrap .xtl_submit.js_exchange_link,
+.cancel_paybutton,
 .acf_submit {
   margin-top: 30px;
   width: 100%;
@@ -7483,6 +7484,7 @@ a.text-dark:focus {
 .hexch_submit:not(:disabled):hover,
 .rb_submit:not(:disabled):hover,
 .homepage_wrap .xtl_submit.js_exchange_link:not(:disabled):hover,
+.cancel_paybutton:not(:disabled):hover,
 .acf_submit:not(:disabled):hover {
   border-width: 4px;
   font-size: 22px;
@@ -7497,6 +7499,7 @@ a.text-dark:focus {
 .hexch_submit:active,
 .rb_submit:active,
 .homepage_wrap .xtl_submit.js_exchange_link:active,
+.cancel_paybutton:active,
 .acf_submit:active {
   background: #363636;
   color: #FFE7CC;
@@ -7511,6 +7514,7 @@ a.text-dark:focus {
 .hexch_submit:focus,
 .rb_submit:focus,
 .homepage_wrap .xtl_submit.js_exchange_link:focus,
+.cancel_paybutton:focus,
 .acf_submit:focus {
   outline: none;
 }
@@ -7524,6 +7528,7 @@ a.text-dark:focus {
 .hexch_submit:disabled,
 .rb_submit:disabled,
 .homepage_wrap .xtl_submit.js_exchange_link:disabled,
+.cancel_paybutton:disabled,
 .acf_submit:disabled {
   opacity: .2;
   cursor: no-drop;
@@ -7542,6 +7547,11 @@ body {
   font-family: Helvetica, sans-serif;
   background: rgba(255, 137, 0, 0.15);
   color: #363636;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 article,
@@ -8681,6 +8691,11 @@ textarea {
   margin: 0 auto 10px;
 }
 
+.partners-page {
+  background: #F2F2F2;
+  height: 100%;
+}
+
 .menu-height {
   height: -webkit-calc(100vh - 51px);
   height: calc(100vh - 51px);
@@ -9083,7 +9098,8 @@ input[type=password]:focus {
   box-shadow: none;
   outline: none;
   background: #ffffff;
-  border-color: #363636;
+  border: none;
+  border-bottom: 2px solid #363636;
 }
 
 .form-control:disabled,
@@ -9505,11 +9521,6 @@ input[type=password]:disabled {
   font-size: 13px;
 }
 
-html,
-body {
-  overflow: auto;
-}
-
 .acf_div_title,
 .log_div_title,
 .reg_div_title,
@@ -9769,8 +9780,11 @@ textarea {
 }
 
 .xchange_table_wrap,
-.hexch_ajax_wrap {
-  width: 1150px;
+.hexch_ajax_wrap,
+.exchange_status_html {
+  max-width: 1150px;
+  margin: auto;
+  width: 100%;
 }
 
 .xtl_table_wrap {
@@ -10026,7 +10040,9 @@ textarea {
   width: 100%;
 }
 
-.hexch_div_ins {
+.hexch_div_ins,
+.block_statusbids,
+.block_xchangedata {
   padding: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -10044,20 +10060,32 @@ textarea {
 }
 
 .hexch_div_ins .hexch_left,
-.hexch_div_ins .hexch_right {
+.block_statusbids .hexch_left,
+.block_xchangedata .hexch_left,
+.hexch_div_ins .hexch_right,
+.block_statusbids .hexch_right,
+.block_xchangedata .hexch_right {
   width: 50%;
 }
 
-.hexch_div_ins .hexch_pers {
+.hexch_div_ins .hexch_pers,
+.block_statusbids .hexch_pers,
+.block_xchangedata .hexch_pers {
   width: 100%;
 }
 
 .hexch_div_ins .hexch_submit_div,
-.hexch_div_ins .hexch_checkdata_div {
+.block_statusbids .hexch_submit_div,
+.block_xchangedata .hexch_submit_div,
+.hexch_div_ins .hexch_checkdata_div,
+.block_statusbids .hexch_checkdata_div,
+.block_xchangedata .hexch_checkdata_div {
   padding: 0;
 }
 
-.hexch_div_ins .hexch_curs_line {
+.hexch_div_ins .hexch_curs_line,
+.block_statusbids .hexch_curs_line,
+.block_xchangedata .hexch_curs_line {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10069,11 +10097,17 @@ textarea {
 }
 
 .hexch_div_ins .hexch_curs_input,
-.hexch_div_ins .hexch_pers_input {
+.block_statusbids .hexch_curs_input,
+.block_xchangedata .hexch_curs_input,
+.hexch_div_ins .hexch_pers_input,
+.block_statusbids .hexch_pers_input,
+.block_xchangedata .hexch_pers_input {
   width: 100%;
 }
 
-.hexch_div_ins .hexch_comis_line {
+.hexch_div_ins .hexch_comis_line,
+.block_statusbids .hexch_comis_line,
+.block_xchangedata .hexch_comis_line {
   padding: 0;
   font: normal 14px/19px Helvetica, sans-serif;
   color: #363636;
@@ -10081,7 +10115,11 @@ textarea {
 }
 
 .hexch_div_ins .hexch_curs_label,
-.hexch_div_ins .hexch_pers_label {
+.block_statusbids .hexch_curs_label,
+.block_xchangedata .hexch_curs_label,
+.hexch_div_ins .hexch_pers_label,
+.block_statusbids .hexch_pers_label,
+.block_xchangedata .hexch_pers_label {
   width: auto;
   margin-right: 20px;
   height: auto;
@@ -10092,7 +10130,11 @@ textarea {
 }
 
 .hexch_div_ins .hexch_curs_label_ins,
-.hexch_div_ins .hexch_pers_label_ins {
+.block_statusbids .hexch_curs_label_ins,
+.block_xchangedata .hexch_curs_label_ins,
+.hexch_div_ins .hexch_pers_label_ins,
+.block_statusbids .hexch_pers_label_ins,
+.block_xchangedata .hexch_pers_label_ins {
   width: auto;
   height: auto;
   text-align: left;
@@ -10128,6 +10170,21 @@ textarea {
   align-items: center;
 }
 
+.block_xchdata_title,
+.block_persdata_title {
+  font: 700 18px/26px Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  color: #2a2a2a;
+  padding: 0;
+  background: transparent;
+}
+
+.block_xchdata_title span,
+.block_persdata_title span {
+  background: transparent;
+}
+
 .standart_windowins {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -10148,6 +10205,7 @@ textarea {
 .wrapper {
   min-height: auto;
   margin-top: 50px;
+  z-index: auto;
 }
 
 .hexch_widget .hexch_title_ins {
@@ -10237,6 +10295,263 @@ textarea {
   padding-left: 160px;
   position: relative;
   top: -20px;
+}
+
+.block_submitbutton input[type=submit],
+a.success_paybutton {
+  width: 400px;
+  height: 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: underline;
+  color: #ffffff;
+  font: 700 36px/30px Helvetica, sans-serif;
+  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background: url("../img/svg/get-transfer.svg") no-repeat right;
+}
+
+.block_submitbutton input[type=submit]:hover,
+a.success_paybutton:hover {
+  background: url("../img/svg/get-transfer.svg") no-repeat right;
+  border: none;
+  text-decoration: none;
+}
+
+.block_submitbutton input[type=submit]:disabled,
+a.success_paybutton:disabled {
+  opacity: .7;
+}
+
+a.success_paybutton {
+  font: 700 26px/30px Helvetica, sans-serif;
+}
+
+.block_xchdata_info_right {
+  position: absolute;
+  z-index: -1;
+  top: -60px;
+  left: -30px;
+}
+
+.block_persdata_info,
+.block_xchdata_info {
+  position: relative;
+}
+
+.block_xchdata_comm {
+  color: #363636;
+  font: 700 16px/26px Helvetica, sans-serif;
+}
+
+.block_persdata_title_ins {
+  font-size: 48px;
+  line-height: 58px;
+  color: #363636;
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.checkbox label {
+  line-height: 25px;
+}
+
+.block_checked_rule {
+  padding-left: 0;
+}
+
+.block_xchdata_text {
+  display: none;
+}
+
+.content_wrap {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.block_statusbid_title {
+  font: 700 36px/44px Helvetica, sans-serif;
+  margin: 0 0 40px;
+  padding: 0;
+  background: transparent;
+  color: #363636;
+}
+
+.block_payinfo_ins {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.block_payinfo_ins .block_payinfo_sum {
+  width: 50%;
+}
+
+.block_payinfo_ins .block_payinfo_sum::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  background: #363636;
+  height: 2px;
+  left: -50%;
+  bottom: 70px;
+  z-index: 1;
+}
+
+.block_payinfo_ins .block_payinfo_sum::after {
+  content: '';
+  background: url("../img/svg/arrow.svg") no-repeat center;
+  width: 18px;
+  height: 18px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: absolute;
+  right: -7px;
+  bottom: 63px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.block_payinfo_sum.block_payinfo_line p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font: 700 24px/30px Helvetica, sans-serif;
+  color: #363636;
+}
+
+.block_payinfo_sum.block_payinfo_line p .ps {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  margin-right: 15px;
+}
+
+.block_payinfo_sum.block_payinfo_line p strong {
+  display: none;
+}
+
+.block_payinfo_warning {
+  font-size: 20px;
+  line-height: 28px;
+  color: #363636;
+}
+
+.block_payinfo {
+  padding-bottom: 40px;
+}
+
+.block_status {
+  background: transparent;
+  padding: 0;
+  margin: 0 0 30px;
+  font: 700 16px/26px Helvetica, sans-serif;
+  color: #363636;
+  opacity: 0.8;
+}
+
+.block_warning_merch {
+  padding: 0;
+  margin: 0 0 30px;
+  background: transparent;
+  font: normal 16px/26px Helvetica, sans-serif;
+  color: #363636;
+  opacity: 0.7;
+}
+
+.block_warning_merch p {
+  margin: 0;
+}
+
+.block_status_delete .block_payinfo_ins,
+.block_status_cancel .block_payinfo_ins {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.js_window_wrap .js_purse_input {
+  padding-left: 40px;
+}
+
+.block_paybutton_ins .cancel_paybutton {
+  height: 90px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font: 700 26px/30px Helvetica, sans-serif;
+  background: transparent;
+  width: 310px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #363636;
+  color: #363636;
+}
+
+.block_paybutton_ins .cancel_paybutton:hover {
+  font-size: 26px;
+  border-width: 3px;
+  text-decoration: none;
+  background: transparent;
+}
+
+.block_paybutton_merch_ins .merch_paybutton {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  height: 80px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 26px;
+  width: 480px;
+}
+
+.block_paybutton_merch_ins .merch_paybutton:hover {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 @media (min-width: 576px) {
