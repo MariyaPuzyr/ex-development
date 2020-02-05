@@ -10,7 +10,7 @@ $query = new WP_Query($args);
     if ($query->have_posts()):
       while ($query->have_posts()): $query->the_post();
         ?>
-          <div>
+          <div data-news="<?= get_the_ID()?>">
               <div class="date"><?= get_the_date(); ?></div>
               <h2><?= get_the_title()?></h2>
             <?= the_content()?>

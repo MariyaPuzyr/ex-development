@@ -10554,6 +10554,127 @@ a.success_paybutton {
   color: #ffffff;
 }
 
+.affiliate-wrap {
+  max-width: 1150px;
+  margin: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.affiliate-wrap h2 {
+  font: 700 48px/58px Helvetica, sans-serif;
+  color: #363636;
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.affiliate-wrap .stattablediv.statstablediv {
+  border: 20px solid #FFDA9F;
+  background: transparent;
+  color: #363636;
+}
+
+.affiliate-wrap .promopage {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.affiliate-wrap .promo_topmenu li a,
+.affiliate-wrap .promouserdiv h3 {
+  font: 700 36px/normal Helvetica, sans-serif;
+  color: #363636;
+}
+
+.affiliate-wrap .promo_menu ul li {
+  margin: 0;
+}
+
+.affiliate-wrap .promo_menu ul li a {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+  border-bottom: 1px solid transparent;
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 5px 10px;
+  text-decoration: underline;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.affiliate-wrap .promo_menu ul li a:hover {
+  margin: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.affiliate-wrap .promo_menu ul li.act a {
+  background: #ffffff;
+  text-decoration: none;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.affiliate-wrap .pbcontainer {
+  padding-top: 20px;
+}
+
+.affiliate-wrap .pbcontainer.act {
+  border-top: 1px dashed #363636;
+}
+
+.affiliate-wrap .partner_textarea,
+.affiliate-wrap .ptextareaus {
+  background: rgba(255, 255, 255, 0.3);
+  height: auto;
+  min-height: auto;
+}
+
+.affiliate-wrap .promouserdiv h4 {
+  font: 700 20px/29px Helvetica, sans-serif;
+  color: #363636;
+}
+
+.affiliate-wrap .statuserdiv {
+  width: 100%;
+  background: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.affiliate-wrap .statuserdiv_title {
+  font: 700 20px 'Open Sans', sans-serif;
+  color: #252927;
+  padding: 20px 10px;
+  margin: 0;
+  background: transparent;
+  text-transform: uppercase;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

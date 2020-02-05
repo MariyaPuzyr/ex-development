@@ -164,7 +164,7 @@ $plugin = get_plugin_class();
                     <li><a class="load-page" href="#" data-link="currency-reserves">Резервы валют</a></li>
                     <li><a class="load-page" href="#" data-link="news-list">Новости</a></li>
                     <li><a href="#">О сервисе</a></li>
-                    <li><a href="affiliate-program.html">Партнерская программа</a></li>
+                    <li><a href="paccount">Партнерская программа</a></li>
                 </ul>
               <div class="partners-info mt-auto">
                 <div class="partners-info__title">Партнерская ссылка:</div>
