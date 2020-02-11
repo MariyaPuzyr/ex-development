@@ -160,10 +160,9 @@ $plugin = get_plugin_class();
           <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="links-tab">
             <div class="menu-height">
                 <ul class="links-list">
-                    <li><a href="exchange.html">Обмен</a></li>
                     <li><a class="load-page" href="#" data-link="currency-reserves">Резервы валют</a></li>
                     <li><a class="load-page" href="#" data-link="news-list">Новости</a></li>
-                    <li><a href="#">О сервисе</a></li>
+                    <li><a href="tos">Правила обмена</a></li>
                     <li><a href="paccount">Партнерская программа</a></li>
                 </ul>
               <div class="partners-info mt-auto">
