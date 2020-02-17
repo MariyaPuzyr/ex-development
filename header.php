@@ -16,6 +16,7 @@ $plugin = get_plugin_class();
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<title><?php wp_title(); ?></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 
 	<?php wp_head(); ?>
 
