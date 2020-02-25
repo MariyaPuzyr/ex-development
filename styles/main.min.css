@@ -10158,6 +10158,10 @@ textarea {
   margin-left: 0;
 }
 
+.hexch_div .hexch_pers_title {
+  display: none;
+}
+
 .hexch_div .hexch_curs_line_ins {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 140px;
