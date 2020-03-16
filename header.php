@@ -36,7 +36,8 @@ $plugin = get_plugin_class();
       <ul class="nav" role="tablist">
         <li><a class="header-menu__link" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true">
             <div class="icons menu-info"></div>
-            <div class="notification">2</div></a></li>
+<!--            <div class="notification">2</div>-->
+            </a></li>
         <li><a class="header-menu__link" id="my-operations-tab" data-toggle="tab" href="#my-operations" role="tab" aria-controls="my-operations" aria-selected="false">
             <div class="icons menu-icons"></div></a></li>
         <li><a class="header-menu__link" id="accounts-list-tab" data-toggle="tab" href="#accounts-list" role="tab" aria-controls="accounts-list" aria-selected="false">
@@ -45,7 +46,8 @@ $plugin = get_plugin_class();
             <div class="icons menu-settings-info"></div></a></li>
         <li><a class="header-menu__link" id="links-tab" data-toggle="tab" href="#links" role="tab" aria-controls="links" aria-selected="false">
             <div class="icons menu-icons-burger"></div>
-            <div class="notification">2</div></a></li>
+<!--            <div class="notification">2</div>-->
+            </a></li>
       </ul>
       <div class="tab-content">
         <?php if ($user_id) { ?>
@@ -153,7 +155,7 @@ $plugin = get_plugin_class();
                     <input class="form-control" type="text" disabled="disabled" value="<?= $url.'?'. $stand_refid .'='. $user_id ?>">
                     <button class="copy-btn"></button>
                   </div>
-                  <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="#">Подробнее</a></div>
+                  <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="paccount">Подробнее</a></div>
                 </form>
               </div>
             </div>
@@ -173,7 +175,7 @@ $plugin = get_plugin_class();
                     <input class="form-control" type="text" disabled="disabled" value="<?= $url.'?'. $stand_refid .'='. $user_id ?>">
                     <button class="copy-btn"></button>
                   </div>
-                  <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="#">Подробнее</a></div>
+                  <div class="partners-info__description">получайте 10-30% от прибыли с переводов.<a href="paccount">Подробнее</a></div>
                 </form>
               </div>
             </div>
