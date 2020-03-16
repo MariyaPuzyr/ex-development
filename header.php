@@ -91,7 +91,7 @@ $plugin = get_plugin_class();
                           <use xlink:href="<?php echo $or_template_directory; ?>/img/sprites/sprite.svg#watsapp-ico"></use>
                         </svg>
                       </div>
-                      <div class="contact-info__item">Watsapp<a href="whatsapp://send?phone=+79817827276">@NewLineonline</a></div>
+                      <div class="contact-info__item">Watsapp<a href="https://wa.me/79817827276">@NewLineonline</a></div>
                     </div>
                   </div>
                 </div>
