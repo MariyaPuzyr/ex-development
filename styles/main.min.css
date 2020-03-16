@@ -9510,7 +9510,7 @@ input[type=password]:disabled {
   font-size: 18px;
   line-height: 24px;
   color: #363636;
-  max-height: 280px;
+  height: 280px !important;
   overflow: auto;
 }
 
@@ -9657,7 +9657,6 @@ textarea {
 
 .jq-selectbox ul {
   height: 100%;
-  max-height: 100% !important;
 }
 
 .userwallets_help {
@@ -9908,8 +9907,8 @@ textarea {
 .homepage_wrap .iselect_js .select_js_title_ins .select_ico {
   width: 80px;
   height: 80px;
-  top: -60px;
-  left: -30px;
+  top: -30px;
+  left: -90px;
 }
 
 .homepage_wrap .select_txt {
@@ -15343,6 +15342,13 @@ a.success_paybutton {
 
   .text-xl-center {
     text-align: center !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .homepage_wrap .iselect_js .select_js_title_ins .select_ico {
+    top: -90px;
+    left: 0;
   }
 }
 
