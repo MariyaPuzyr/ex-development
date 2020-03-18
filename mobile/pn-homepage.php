@@ -12,30 +12,55 @@ mobile_theme_include('header');
 $plugin = get_plugin_class();
 
 $mho_change = get_theme_option('mho_change', array('wtitle','wtext','ititle','itext','blocreviews','lastobmen','hidecurr','partners','blocknews','catnews','advantages'));
- 
+$ho_change =  get_theme_option('ho_change', array('wtitle','wtext','ititle','itext','blocknews','blocreviews','catnews','lastobmen','hidecurr','partners','advantages'));
+
 ?>
 <div class="homepage_wrap">
 
-	<?php
-	if($mho_change['wtext']){
-	?>
+<!--	<?php
+/*	if($mho_change['wtext']){
+	*/?>
 	<div class="home_wtext_block">
 		<div class="home_wtext_ins">
-			<div class="home_wtext_title"><?php echo pn_strip_input($mho_change['wtitle']); ?></div>
+			<div class="home_wtext_title"><?php /*echo pn_strip_input($mho_change['wtitle']); */?></div>
 			<div class="home_wtext_div">
 				<div class="text">
-					<?php echo apply_filters('the_content',$mho_change['wtext']); ?>
+					<?php /*echo apply_filters('the_content',$mho_change['wtext']); */?>
 						<div class="clear"></div>
 				</div>
 			</div>
 		</div>
-	</div>		
-	<?php } ?>
+	</div>
+	--><?php /*} */?>
 	
+<!--	<div class="xchange_table_wrap">-->
+<!--		--><?php //if(function_exists('the_exchange_home_mobile')){ the_exchange_home_mobile(); }  ?>
+<!--	</div>	-->
+
+    <?php
+    if($ho_change['wtext']){
+        ?>
+			<div class="home_wtext_wrap">
+				<div class="home_wtext_ins">
+					<div class="home_wtext_block">
+						<div class="home_wtext_title"><?php echo pn_strip_input($ho_change['wtitle']); ?></div>
+						<div class="home_wtext_div">
+							<div class="text">
+                  <?php echo apply_filters('the_content', $ho_change['wtext']); ?>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    <?php }
+    ?>
+
 	<div class="xchange_table_wrap">
-		<?php if(function_exists('the_exchange_home_mobile')){ the_exchange_home_mobile(); }  ?>
-	</div>	
-	
+      <?php if(function_exists('the_exchange_home')){ the_exchange_home(); }  ?>
+	</div>
+
+  <?php if(function_exists('the_exchange_widget')){ the_exchange_widget(); } ?>
 	<?php
 	if($mho_change['itext']){
 	?>
