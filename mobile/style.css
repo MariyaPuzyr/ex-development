@@ -4004,7 +4004,7 @@ a.captcha_reload {
   background: #363636;
   color: #ffedd9;
 }
-.info_window{
+.info_window {
   display: none;
   z-index: 1;
   position: absolute;
@@ -4018,7 +4018,7 @@ a.captcha_reload {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-.js_window_wrap.showed .info_window{
+.js_window_wrap.showed .info_window {
   display: block;
 }
 .block_xchdata {
@@ -4046,3 +4046,4 @@ a.captcha_reload {
   height: 50px;
   background-size: cover;
 }
+.log_div_title, .reg_div_title, .log_line_subm_right {display: none}
